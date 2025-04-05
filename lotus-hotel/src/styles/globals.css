@@ -1,0 +1,19 @@
+@import "tailwindcss";
+:root {
+  --primary-cream-white: #FAF7F1;    /* Nền chính, header, footer */
+  --primary-light-gold: #E6B35A;     /* Vùng nổi bật, hover nhẹ */
+
+  --accent-golden-yellow: #D59F30;   /* Nút chính như "Đặt phòng", icon, CTA */
+  --accent-deep-gold: #B8860B;       /* Hover nút, tiêu đề chính */
+
+  --accent-success-green: #CDE3B2;   /* Thành công */
+  --accent-error-red: #F8D7DA;       /* Lỗi hoặc cảnh báo */
+
+  --text-dark-gold: #8B6B1A;         /* Tiêu đề */
+  --text-body: #5C5C5C;              /* Văn bản nội dung */
+  --text-light: #FFFFFF;             /* Trên nền tối */
+}
+
+h1 {
+  color: var(--text-dark-gold);
+}
