@@ -1,4 +1,11 @@
 @import "tailwindcss";
+/* ===== RESET CSS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-cream-white: #FAF7F1;    /* Nền chính, header, footer */
   --primary-light-gold: #E6B35A;     /* Vùng nổi bật, hover nhẹ */
@@ -14,6 +21,61 @@
   --text-light: #FFFFFF;             /* Trên nền tối */
 }
 
-h1 {
-  color: var(--text-dark-gold);
+
+
+/* ===== TYPOGRAPHY & BASE STYLES ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+/* Style cho các tiêu đề */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Đoạn văn */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Định dạng link */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== BUTTON, INPUT & FORM ===== */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }
