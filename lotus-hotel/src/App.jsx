@@ -1,11 +1,9 @@
-import { useState } from 'react'
-import '@styles/globals.css'
+import React from 'react';
 
 function App() {
-    return (
-        <h1>Lotus Hotel</h1>
-    )
-    
+  return (
+    <h1>Welcome</h1>
+  );
 }
 
-export default App
+export default App;

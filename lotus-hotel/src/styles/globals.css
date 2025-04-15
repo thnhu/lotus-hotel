@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "@fontsource/roboto";
-@import "@fontsource/be-vietnam-pro";
 /* ===== RESET CSS ===== */
 * {
   margin: 0;
@@ -44,9 +42,6 @@
   --screen-xl: 1440px;  /* Extra large */
 
 }
-
-
-
 /* ===== TYPOGRAPHY & BASE STYLES ===== */
 body {
   font-family: 'Roboto', 'Be-Vietnam-Pro',sans-serif;
