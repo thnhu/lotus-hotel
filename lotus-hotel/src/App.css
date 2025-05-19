@@ -1,0 +1,107 @@
+@import "tailwindcss";
+/* ===== RESET CSS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --primary-cream-white: hsl(40, 50%, 95%);   /* Nền chính, header, footer */
+  --primary-light-gold: hsl(36, 75%, 60%);    /* Vùng nổi bật, hover nhẹ */
+
+  /* Accent Colors */
+  --accent-golden-yellow: hsl(39, 65%, 50%);  /* Nút chính như "Đặt phòng", icon, CTA */
+  --accent-deep-gold: hsl(43, 90%, 40%);      /* Hover nút, tiêu đề chính */
+  --accent-success-green: hsl(87, 50%, 50%);  /* Thành công */
+  --accent-error-red: hsl(355, 60%, 50%);     /* Lỗi hoặc cảnh báo */
+
+  /* Text Colors */
+  --text-dark-gold: hsl(43, 70%, 40%);        /* Tiêu đề */
+  --text-body: hsl(0, 0%, 40%);               /* Văn bản nội dung */
+  --text-light: hsl(0, 0%, 100%);             /* Trên nền tối */
+
+  --text-base: 1rem;       /* 16px - Dùng cho nội dung chính, văn bản thông thường trong đoạn văn */
+  --text-lg: 1.125rem;     /* 18px - Dùng cho nội dung nổi bật hơn, hoặc đoạn văn trong card/component */
+  --text-xl: 1.25rem;      /* 20px - Dùng cho tiêu đề cấp thấp (h4), subtitle hoặc callout nhỏ */
+  --text-2xl: 1.5rem;      /* 24px - Dùng cho tiêu đề cấp trung (h3), tiêu đề section */
+  --text-3xl: 2rem;        /* 32px - Dùng cho tiêu đề lớn (h1/h2), tiêu đề trang hoặc hero banner */
+
+  --spacing-xs: 0.25rem;  /* 4px - Dùng cho khoảng cách rất nhỏ, như giữa icon và text hoặc viền nhỏ */
+  --spacing-sm: 0.5rem;   /* 8px - Dùng cho padding nhỏ trong nút, khoảng cách giữa label và input */
+  --spacing-md: 1rem;     /* 16px - Dùng cho khoảng cách mặc định, padding cho card hoặc container */
+  --spacing-lg: 1.5rem;   /* 24px - Dùng cho khoảng cách giữa các section, margin giữa các component */
+  --spacing-xl: 2rem;     /* 32px - Dùng cho padding lớn ở header/footer hoặc các section lớn */
+  --spacing-2xl: 3rem;    /* 48px - Dùng cho khoảng trắng lớn: hero section, khoảng cách trang chủ */ 
+
+  --screen-xs: 480px;   /* Mobile small */
+  --screen-sm: 768px;   /* Tablet */
+  --screen-md: 1024px;  /* Desktop */
+  --screen-lg: 1280px;  /* Large desktop */
+  --screen-xl: 1440px;  /* Extra large */
+
+}
+/* ===== TYPOGRAPHY & BASE STYLES ===== */
+body {
+  font-family: 'Roboto', 'Be-Vietnam-Pro',sans-serif;
+  font-size: var(--text-base);
+  line-height: 1.5;
+  color: var(--text-dark-gold);
+  background-color: var(--primary-cream-white);
+}
+
+/* Style cho các tiêu đề */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+h2 {
+  font-size: var(--text-2xl);
+}
+
+/* Đoạn văn */
+p {
+  margin-bottom: var(--text-base);
+}
+
+/* Định dạng link */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== BUTTON, INPUT & FORM ===== */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--accent-golden-yellow);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: var(--accent-deep-gold);
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: var(--screen-sm)) {
+  body {
+    font-size: 14px;
+  }
+}
