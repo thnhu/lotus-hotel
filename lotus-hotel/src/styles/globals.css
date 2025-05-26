@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 /* ===== RESET CSS ===== */
 * {
   margin: 0;
@@ -9,20 +7,24 @@
 }
 
 :root {
-  /* Primary Colors */
-  --primary-cream-white: hsl(40, 50%, 95%);   /* Nền chính, header, footer */
-  --primary-light-gold: hsl(36, 75%, 60%);    /* Vùng nổi bật, hover nhẹ */
+  /* Visual Design - Màu chủ đạo cho nhận diện */
+  --visual-design-main: hsl(215 84% 46%);   /* Màu nhấn chính (logo, button) */
+  
+  /* Primary Colors - Màu nguyên bản */
+  --primary-500: hsl(215 87% 61%);         /* Màu chính */
+  --primary-300: hsl(210, 60%, 75%);         /* Màu phụ trạng thái hover */
+  --primary-100: hsl(210, 50%, 95%);         /* Màu nền nhẹ */
 
-  /* Accent Colors */
-  --accent-golden-yellow: hsl(39, 65%, 50%);  /* Nút chính như "Đặt phòng", icon, CTA */
-  --accent-deep-gold: hsl(43, 90%, 40%);      /* Hover nút, tiêu đề chính */
-  --accent-success-green: hsl(87, 50%, 50%);  /* Thành công */
-  --accent-error-red: hsl(355, 60%, 50%);     /* Lỗi hoặc cảnh báo */
+  /* Semantic Colors - Màu ngữ nghĩa */
+  --semantic-success: hsl(152 82% 39%);    /* Thành công/Thông báo tích cực */
+  --semantic-warning: hsl(34 94% 50%);     /* Cảnh báo */
+  --semantic-error: hsl(4 86% 58%);         /* Lỗi/Nguy hiểm */
 
-  /* Text Colors */
-  --text-dark-gold: hsl(43, 70%, 40%);        /* Tiêu đề */
-  --text-body: hsl(0, 0%, 40%);               /* Văn bản nội dung */
-  --text-light: hsl(0, 0%, 100%);             /* Trên nền tối */
+  /* Neutral Colors - Màu trung tính */
+  --neutral-900: hsl(210, 15%, 20%);         /* Chữ chính */
+  --neutral-500: hsl(210, 10%, 50%);         /* Chữ phụ */
+  --neutral-300: hsl(210, 15%, 85%);         /* Đường viền */
+  --neutral-100: hsl(210, 20%, 98%);         /* Nền trang */
 
   --text-base: 1rem;       /* 16px - Dùng cho nội dung chính, văn bản thông thường trong đoạn văn */
   --text-lg: 1.125rem;     /* 18px - Dùng cho nội dung nổi bật hơn, hoặc đoạn văn trong card/component */
@@ -49,8 +51,8 @@ body {
   font-family: 'Roboto', 'Be-Vietnam-Pro',sans-serif;
   font-size: var(--text-base);
   line-height: 1.5;
-  color: var(--text-dark-gold);
-  background-color: var(--primary-cream-white);
+  color: var(--neutral-900);
+  background-color: var(--neutral-100);
 }
 
 /* Style cho các tiêu đề */
@@ -74,7 +76,6 @@ p {
 
 /* Định dạng link */
 a {
-  color: var(--primary-color);
   text-decoration: none;
 }
 a:hover {
@@ -82,18 +83,6 @@ a:hover {
 }
 
 /* ===== BUTTON, INPUT & FORM ===== */
-button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: var(--accent-golden-yellow);
-  color: var(--text-light);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-button:hover {
-  background-color: var(--accent-deep-gold);
-}
-
 /* ===== LAYOUT ===== */
 .container {
   max-width: 1200px;
